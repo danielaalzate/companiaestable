@@ -9,3 +9,5 @@ UI/UX Pro Max: consulta de sistema `theatre cultural editorial portfolio` demasi
 Narrativa: relacionar repertorio y presente con frases concretas. Pedro articula una práctica colectiva. Las lecturas de Tosca y La vorágine se basan en las síntesis y enlaces aportados por el usuario y se presentan como lecturas de entrevistas, no como citas, declaraciones oficiales o motivaciones íntimas. No atribuir toda obra del director a la compañía. No ofrecer formación ni talleres.
 
 Audiencias: público (obra actual), programadores (repertorio y contacto), colaboradores (compañía y dirección). Mantener navegación hamburguesa consistente, menú inaccesible cuando está cerrado, Escape y foco visible. Objetivos táctiles mínimos 44px, cuerpo 16px, metadatos 12px, sin desplazamiento lateral.
+
+Aliados estratégicos: usar un carrusel de logos con desplazamiento horizontal, controles anterior/siguiente y pausa/reanudar. El avance automático se detiene al enfocar, al pasar el cursor o al intervenir; se desactiva con movimiento reducido. Conservar los logos suministrados sin recolorearlos ni recortarlos.
