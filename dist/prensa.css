@@ -25,3 +25,6 @@
 .partner figcaption{font-size:13px;line-height:1.5;color:#55453d;min-height:40px;margin-top:16px}.carousel-status{font:13px/1.5 'DM Mono',monospace;color:#55453d;margin:22px 0 0}
 @media(max-width:760px){.press-heading{grid-template-columns:1fr;gap:24px;margin-bottom:35px}.press-heading h2{font-size:3.3rem}.press-heading>p{font-size:16px}.press-list{grid-template-columns:1fr}.press-item>a{padding:24px 0}.press-item h3{font-size:1.7rem}.press-meta{margin-bottom:18px}.partners{padding:45px 24px}.partners-heading{display:block}.partners-heading h2{font-size:2.2rem}.partners-heading p{margin-top:16px}.carousel-controls{margin-top:22px}.carousel-pause{margin-left:auto}.partners-viewport{padding-top:28px}.partners-grid{gap:16px}.partner{min-width:100%}.partner-logo{height:120px}.partner-logo img{max-height:100px}.partner-logo .logo-delia{max-height:130px}.partner-logo .logo-sinfonica{max-height:140px}.partner figcaption{font-size:12px;margin-top:12px}}
 @media(prefers-reduced-motion:reduce){.press-item>a,.press-item h3,.partners-grid{transition:none;scroll-behavior:auto}}
+
+.partner a{display:block;height:100%;color:inherit;text-decoration:none}.partner a:focus-visible{outline:2px solid var(--coral);outline-offset:5px}.partner-logo .logo-ola{width:126%;max-width:none;max-height:150px}
+@media(max-width:760px){.partner-logo .logo-ola{max-height:125px}}
