@@ -24,6 +24,14 @@ if(bohemeCredit && document.title.includes('La bohème')) bohemeCredit.textConte
 
 if(document.body?.dataset.page === 'home'){
   document.querySelectorAll('.section-label').forEach(label => { label.textContent = label.textContent.replace(/^\d+\s+—\s+/, ''); });
+  const currentProductionImage = document.querySelector('#en-escena .feature-image');
+  if(currentProductionImage){
+    currentProductionImage.style.backgroundImage = "linear-gradient(0deg,rgba(17,16,17,.38),transparent),url('./como-les-guste-carlos-lema.jpg')";
+    const credit = document.createElement('p');
+    credit.className = 'photo-credit-note';
+    credit.textContent = 'Fotografía: Carlos Lema';
+    document.querySelector('#en-escena .feature-body')?.append(credit);
+  }
 }
 
 const partnersTrack = document.querySelector('[data-partners-track]');
