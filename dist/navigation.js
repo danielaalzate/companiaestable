@@ -12,7 +12,12 @@ if(toggle && panel){
   const sceneLink = onHome ? '#en-escena' : './index.html#en-escena';
   const productionsLink = onHome ? '#producciones' : './index.html#producciones';
   const contactLink = onHome ? '#contacto' : './index.html#contacto';
+  const brandHomeLink = onHome ? '#inicio' : './index.html';
+  document.querySelectorAll('.nav .brand').forEach(brand => {
+    brand.innerHTML = `<span class="brand-lockup" aria-hidden="true"><img src="./assets/logo-compania-estable-transparente.png" alt="" width="1600" height="749"></span><span class="brand-foundation" aria-hidden="true">Fundación</span>`;
+  });
   panel.innerHTML = `
+    <a class="menu-brand" href="${brandHomeLink}" aria-label="Fundación La Compañía Estable, inicio"><span class="menu-brand-lockup" aria-hidden="true"><img src="./assets/logo-compania-estable-transparente.png" alt="" width="1600" height="749"></span><span class="menu-brand-caption" aria-hidden="true">Fundación<br>Bogotá, Colombia</span></a>
     <div class="menu-group">
       <button class="menu-submenu-toggle" type="button" aria-expanded="false" aria-controls="company-submenu">La compañía <span aria-hidden="true">+</span></button>
       <div class="menu-submenu" id="company-submenu" hidden>
