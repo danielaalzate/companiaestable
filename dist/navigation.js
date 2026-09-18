@@ -14,7 +14,7 @@ if(toggle && panel){
   const contactLink = onHome ? '#contacto' : './index.html#contacto';
   const brandHomeLink = onHome ? '#inicio' : './index.html';
   document.querySelectorAll('.nav .brand').forEach(brand => {
-    brand.innerHTML = `<span class="brand-lockup" aria-hidden="true"><img src="./assets/logo-compania-estable-transparente.png" alt="" width="1600" height="749"></span><span class="brand-foundation" aria-hidden="true">Fundación</span>`;
+    brand.innerHTML = `<span class="brand-lockup" aria-hidden="true"><img src="./assets/logo-compania-estable-transparente.png" alt="" width="1600" height="749"></span><span class="brand-name" aria-hidden="true"><small>Fundación</small><strong>La Compañía<br>Estable</strong></span>`;
   });
   panel.innerHTML = `
     <a class="menu-brand" href="${brandHomeLink}" aria-label="Fundación La Compañía Estable, inicio"><span class="menu-brand-lockup" aria-hidden="true"><img src="./assets/logo-compania-estable-transparente.png" alt="" width="1600" height="749"></span><span class="menu-brand-caption" aria-hidden="true">Fundación<br>Bogotá, Colombia</span></a>
