@@ -63,6 +63,12 @@ const bohemeCredit = document.querySelector('body[data-page="production"] .photo
 if(bohemeCredit && document.title.includes('La bohème')) bohemeCredit.textContent = 'Fotografías: Juan Diego Castillo · Archivo visual de La Compañía Estable.';
 
 if(document.body?.dataset.page === 'home'){
+  if(!document.querySelector('link[href="./home-credit.css"]')){
+    const creditStyles = document.createElement('link');
+    creditStyles.rel = 'stylesheet';
+    creditStyles.href = './home-credit.css';
+    document.head.append(creditStyles);
+  }
   document.querySelectorAll('.section-label').forEach(label => { label.textContent = label.textContent.replace(/^\d+\s+—\s+/, ''); });
   const hero = document.querySelector('#inicio.hero');
   if(hero && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
@@ -120,7 +126,7 @@ if(document.body?.dataset.page === 'home'){
     const credit = document.createElement('p');
     credit.className = 'photo-credit-note';
     credit.textContent = 'Fotografía: Carlos Lema';
-    document.querySelector('#en-escena .feature-body')?.append(credit);
+    currentProductionImage.insertAdjacentElement('afterend', credit);
   }
 }
 
