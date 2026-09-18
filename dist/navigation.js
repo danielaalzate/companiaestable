@@ -21,9 +21,8 @@ if(toggle && panel){
       </div>
     </div>
     <a href="${sceneLink}">En escena <span>↗</span></a>
-    <a href="./repertorio.html">Repertorio <span>↗</span></a>
     <a href="./pedro-salazar.html">Dirección <span>↗</span></a>
-    <a href="${productionsLink}">Producciones <span>↗</span></a>
+    <a href="${productionsLink}">Portafolio <span>↗</span></a>
     <a href="${contactLink}">Contacto <span>↗</span></a>`;
   const companyToggle = panel.querySelector('.menu-submenu-toggle');
   const companySubmenu = panel.querySelector('.menu-submenu');
