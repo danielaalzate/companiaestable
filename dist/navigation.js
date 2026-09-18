@@ -22,6 +22,10 @@ filters.forEach(button=>button.addEventListener('click',()=>{
 const bohemeCredit = document.querySelector('body[data-page="production"] .photo-credit-note');
 if(bohemeCredit && document.title.includes('La bohème')) bohemeCredit.textContent = 'Fotografías: Juan Diego Castillo · Archivo visual de La Compañía Estable.';
 
+if(document.body?.dataset.page === 'home'){
+  document.querySelectorAll('.section-label').forEach(label => { label.textContent = label.textContent.replace(/^\d+\s+—\s+/, ''); });
+}
+
 const partnersTrack = document.querySelector('[data-partners-track]');
 const currentProductionTitle = document.querySelector('#en-escena .feature-body h2');
 if(currentProductionTitle) currentProductionTitle.innerHTML = 'Como les<br><em>guste</em>';
