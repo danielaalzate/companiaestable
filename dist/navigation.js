@@ -24,6 +24,34 @@ if(bohemeCredit && document.title.includes('La bohème')) bohemeCredit.textConte
 
 if(document.body?.dataset.page === 'home'){
   document.querySelectorAll('.section-label').forEach(label => { label.textContent = label.textContent.replace(/^\d+\s+—\s+/, ''); });
+  const hero = document.querySelector('#inicio.hero');
+  if(hero && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    const video = document.createElement('video');
+    video.className = 'hero-video';
+    video.src = './assets/hero-repertorio-compania-estable.mp4';
+    video.autoplay = true;
+    video.muted = true;
+    video.loop = true;
+    video.playsInline = true;
+    video.preload = 'metadata';
+    video.setAttribute('aria-hidden', 'true');
+    hero.prepend(video);
+  }
+  const eyebrow = hero?.querySelector('.eyebrow');
+  const heroTitle = hero?.querySelector('h1');
+  const heroCopy = hero?.querySelector('.hero-copy');
+  const heroActions = hero?.querySelector('.actions');
+  const heroCard = hero?.querySelector('.hero-card');
+  if(eyebrow) eyebrow.innerHTML = '<span class="dot"></span> Teatro y ópera · Bogotá';
+  if(heroTitle) heroTitle.innerHTML = 'Un repertorio<br><em>en movimiento.</em>';
+  if(heroCopy) heroCopy.textContent = 'Obras clásicas y contemporáneas que viajan entre escenarios, lenguajes y públicos. Teatro y ópera creados desde Bogotá para dialogar con Colombia y Latinoamérica.';
+  if(heroActions){
+    const primary = heroActions.querySelector('.button:first-child');
+    const secondary = heroActions.querySelector('.button.dark');
+    if(primary){ primary.href = './repertorio.html'; primary.innerHTML = 'Explorar repertorio <span class="arrow">↗</span>'; }
+    if(secondary) secondary.textContent = 'Coproducciones';
+  }
+  if(heroCard) heroCard.innerHTML = '<div><p>Teatro &amp; ópera</p><strong>Más de 20<br><i>producciones</i></strong></div><p class="meta">Bogotá, Colombia<br>Desde 2008</p>';
   const currentProductionImage = document.querySelector('#en-escena .feature-image');
   if(currentProductionImage){
     currentProductionImage.style.backgroundImage = "linear-gradient(0deg,rgba(17,16,17,.38),transparent),url('./como-les-guste-carlos-lema.jpg')";
