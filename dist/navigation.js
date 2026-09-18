@@ -34,7 +34,7 @@ if(partnersTrack){
   const move = direction => { partnersTrack.scrollBy({left:direction * (slides[0].offsetWidth + 24),behavior:reducedMotion ? 'auto' : 'smooth'}); window.setTimeout(updateStatus, 320); };
   const stop = () => { window.clearInterval(timer); timer = undefined; };
   const start = () => { if(isPaused || reducedMotion) return; stop(); timer = window.setInterval(() => { const atEnd = currentSlide() === slides.length - 1; if(atEnd) partnersTrack.scrollTo({left:0,behavior:'smooth'}); else move(1); }, 5500); };
-  const pauseCarousel = () => { isPaused = true; stop(); pause.setAttribute('aria-pressed','true'); pause.textContent = 'Reanudar carrusel'; };
+  const pauseCarousel = () => { isPaused = true; stop(); if(pause){ pause.setAttribute('aria-pressed','true'); pause.textContent = 'Reanudar carrusel'; } };
   previous?.addEventListener('click',()=>{pauseCarousel();move(-1)});
   next?.addEventListener('click',()=>{pauseCarousel();move(1)});
   pause?.addEventListener('click',()=>{ if(isPaused){isPaused=false;pause.setAttribute('aria-pressed','false');pause.textContent='Pausar carrusel';start()}else pauseCarousel(); });
