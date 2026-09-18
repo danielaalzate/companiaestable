@@ -20,6 +20,8 @@ filters.forEach(button=>button.addEventListener('click',()=>{
   document.querySelectorAll('.production[data-type]').forEach(card=>{card.hidden=button.dataset.filter!=='all' && card.dataset.type!==button.dataset.filter});
 }));
 const partnersTrack = document.querySelector('[data-partners-track]');
+const currentProductionTitle = document.querySelector('#en-escena .feature-body h2');
+if(currentProductionTitle) currentProductionTitle.innerHTML = 'Como les<br><em>guste</em>';
 if(partnersTrack){
   const slides = [...partnersTrack.querySelectorAll('.partner')];
   const previous = document.querySelector('[data-carousel-prev]');
