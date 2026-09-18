@@ -19,6 +19,13 @@ filters.forEach(button=>button.addEventListener('click',()=>{
   filters.forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
   document.querySelectorAll('.production[data-type]').forEach(card=>{card.hidden=button.dataset.filter!=='all' && card.dataset.type!==button.dataset.filter});
 }));
+const whatsappNumber = '573145678900';
+const whatsappLink = label => `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hola, quisiera conversar sobre ${label}.`)}`;
+document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+  link.href = whatsappLink(link.textContent.trim().replace(/↗/g, '') || 'La Compañía Estable');
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+});
 const bohemeCredit = document.querySelector('body[data-page="production"] .photo-credit-note');
 if(bohemeCredit && document.title.includes('La bohème')) bohemeCredit.textContent = 'Fotografías: Juan Diego Castillo · Archivo visual de La Compañía Estable.';
 
@@ -51,7 +58,29 @@ if(document.body?.dataset.page === 'home'){
     if(primary){ primary.href = './repertorio.html'; primary.innerHTML = 'Explorar repertorio <span class="arrow">↗</span>'; }
     if(secondary) secondary.textContent = 'Coproducciones';
   }
+  document.querySelectorAll('a[href="#contacto"]').forEach(link => {
+    link.href = whatsappLink(link.textContent.trim().replace(/↗/g, '') || 'La Compañía Estable');
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+  });
   if(heroCard) heroCard.innerHTML = '<div><p>Teatro &amp; ópera</p><strong>Más de 20<br><i>producciones</i></strong></div><p class="meta">Bogotá, Colombia<br>Desde 2008</p>';
+  const contactCopy = document.querySelector('#contacto .contact-bottom p');
+  if(contactCopy){
+    const address = document.createElement('a');
+    address.className = 'contact-address';
+    address.href = 'https://www.google.com/maps/place//data=!4m2!3m1!1s0x8e3f9a8aa6a64339:0x1be32bf1a4bd9be?sa=X&ved=1t:8290&ictx=111';
+    address.target = '_blank';
+    address.rel = 'noopener noreferrer';
+    address.textContent = 'Cra. 11 #82 - 76, Oficina 901 · Bogotá, Colombia ↗';
+    contactCopy.after(address);
+  }
+  const contactButton = document.querySelector('#contacto .contact-bottom .button');
+  if(contactButton){
+    contactButton.href = whatsappLink('La Compañía Estable');
+    contactButton.target = '_blank';
+    contactButton.rel = 'noopener noreferrer';
+    contactButton.innerHTML = 'Escribir por WhatsApp <span class="arrow">↗</span>';
+  }
   const currentProductionImage = document.querySelector('#en-escena .feature-image');
   if(currentProductionImage){
     currentProductionImage.style.backgroundImage = "linear-gradient(0deg,rgba(17,16,17,.38),transparent),url('./como-les-guste-carlos-lema.jpg')";
