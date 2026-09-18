@@ -1,6 +1,40 @@
 const toggle = document.querySelector('.menu-toggle');
 const panel = document.querySelector('.menu-panel');
 if(toggle && panel){
+  if(!document.querySelector('link[href="./menu.css"]')){
+    const menuStyles = document.createElement('link');
+    menuStyles.rel = 'stylesheet';
+    menuStyles.href = './menu.css';
+    document.head.append(menuStyles);
+  }
+  const onHome = document.body?.dataset.page === 'home';
+  const homeLink = onHome ? '#compania' : './index.html#compania';
+  const sceneLink = onHome ? '#en-escena' : './index.html#en-escena';
+  const productionsLink = onHome ? '#producciones' : './index.html#producciones';
+  const contactLink = onHome ? '#contacto' : './index.html#contacto';
+  panel.innerHTML = `
+    <div class="menu-group">
+      <button class="menu-submenu-toggle" type="button" aria-expanded="false" aria-controls="company-submenu">La compañía <span aria-hidden="true">+</span></button>
+      <div class="menu-submenu" id="company-submenu" hidden>
+        <a href="${homeLink}">Nosotros <span>↗</span></a>
+        <a href="./equipo.html">Equipo <span>↗</span></a>
+      </div>
+    </div>
+    <a href="${sceneLink}">En escena <span>↗</span></a>
+    <a href="./repertorio.html">Repertorio <span>↗</span></a>
+    <a href="./pedro-salazar.html">Dirección <span>↗</span></a>
+    <a href="${productionsLink}">Producciones <span>↗</span></a>
+    <a href="${contactLink}">Contacto <span>↗</span></a>`;
+  const companyToggle = panel.querySelector('.menu-submenu-toggle');
+  const companySubmenu = panel.querySelector('.menu-submenu');
+  const setCompanyMenu = open => {
+    companyToggle?.setAttribute('aria-expanded', String(open));
+    if(companySubmenu) companySubmenu.hidden = !open;
+  };
+  companyToggle?.addEventListener('click', event => {
+    event.stopPropagation();
+    setCompanyMenu(companyToggle.getAttribute('aria-expanded') !== 'true');
+  });
   const setMenu = open => {
     toggle.setAttribute('aria-expanded', String(open));
     toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
@@ -10,7 +44,7 @@ if(toggle && panel){
   setMenu(false);
   toggle.addEventListener('click',()=>setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
   panel.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
-  document.addEventListener('keydown',e=>{if(e.key==='Escape' && toggle.getAttribute('aria-expanded')==='true'){setMenu(false);toggle.focus()}});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape' && toggle.getAttribute('aria-expanded')==='true'){setCompanyMenu(false);setMenu(false);toggle.focus()}});
   document.addEventListener('click',e=>{if(!panel.contains(e.target)&&!toggle.contains(e.target))setMenu(false)});
   document.addEventListener('focusin',e=>{if(!panel.contains(e.target)&&!toggle.contains(e.target))setMenu(false)});
 }
