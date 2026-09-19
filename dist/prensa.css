@@ -1,6 +1,6 @@
-.press{background:var(--ink);border-top:1px solid var(--rule)}
+.press{background:var(--paper);color:var(--ink);border-top:1px solid var(--rule)}
 .press-feature{display:grid;grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr);gap:clamp(28px,5vw,80px);padding:42px 0 52px;border-top:1px solid var(--coral);align-items:center}
-.press-portrait{margin:0;min-width:0}.press-portrait-image{position:relative}.press-portrait-image:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,var(--ink),transparent 60%);pointer-events:none}.press-portrait img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center 30%}.press-portrait figcaption{font-size:12px;line-height:1.6;color:var(--muted);padding-top:12px}
+.press-feature-source{min-width:0}.press-source-note{font-size:15px;line-height:1.6;max-width:25ch;color:#635951;margin:24px 0 0}
 .press-feature-copy{min-width:0}.press-masthead{font:600 clamp(26px,3vw,40px)/1.2 'Playfair Display',serif;letter-spacing:-.03em;margin:0 0 16px;padding-bottom:20px;border-bottom:1px solid var(--rule)}
 .press-category{font-size:12px;line-height:1.6;color:#c5b4ad;margin:0 0 22px}
 .press-feature h3{font:500 clamp(28px,3.3vw,49px)/1.18 'Playfair Display',serif;letter-spacing:-.025em;text-wrap:balance;margin:0 0 24px}.press-feature h3 a:hover{color:#ff9a8d}.press-feature a:focus-visible{outline:2px solid var(--coral);outline-offset:5px}
@@ -44,3 +44,41 @@
 .partners{padding:38px var(--gutter) 32px;background:#ece6e0}.partners-heading{padding-bottom:18px}.partners-heading h2{font-size:clamp(1.55rem,2.4vw,2.15rem)}.partners-heading p{font-size:14px;margin-top:6px}.partners-viewport{padding-top:20px}.partners-grid{gap:18px}.partners .partner{min-width:calc((100% - 54px)/4)}.partners .partner-logo{height:82px}.partners .partner-logo img{max-height:62px}.partners .partner-logo .logo-delia{width:116%;max-height:80px}.partners .partner-logo .logo-sinfonica{width:112%;max-height:76px}.partners .partner-logo .logo-ola{width:112%;max-height:72px}.partners .partner figcaption{font-size:11px;line-height:1.35;min-height:28px;margin-top:8px}.partners .carousel-status{font-size:11px;margin-top:14px}
 @media(max-width:760px){.sponsors{padding:64px 24px 48px}.sponsors-heading{display:block}.sponsors-heading h2{font-size:3.45rem}.sponsors-heading p{font-size:16px}.sponsors .carousel-controls{margin-top:24px}.sponsors-viewport{padding-top:26px}.sponsors-grid{gap:16px}.sponsors .partner{min-width:100%;padding:24px}.sponsors .partner-logo{height:158px}.sponsors .partner-logo img{max-height:122px}.partners{padding:32px 24px 28px}.partners-heading{display:flex;align-items:end}.partners-heading h2{font-size:1.7rem}.partners-heading p{font-size:13px}.partners .carousel-controls{margin-top:0}.partners-viewport{padding-top:16px}.partners-grid{gap:16px}.partners .partner{min-width:calc((100% - 16px)/2)}.partners .partner-logo{height:70px}.partners .partner-logo img{max-height:52px}.partners .partner-logo .logo-delia{max-height:66px}.partners .partner-logo .logo-sinfonica{max-height:62px}.partners .partner-logo .logo-ola{max-height:58px}.partners .partner figcaption{font-size:10px;min-height:27px;margin-top:6px}.partners .carousel-status{margin-top:12px}}
 @media(prefers-reduced-motion:reduce){.sponsors-grid{scroll-behavior:auto}}
+
+/* Press reads as a cultural journal, with a lead interview and a compact reading index. */
+.press .press-heading{grid-template-columns:1.4fr .6fr;gap:40px;margin-bottom:38px}
+.press .press-heading h2{font-size:clamp(52px,6.5vw,92px);line-height:1.02}
+.press .press-heading h2 br{display:none}
+.press .press-heading h2 em{color:#a13b31}
+.press .press-heading>p{color:#635951;font-size:16px}
+.press .press-feature{grid-template-columns:minmax(0,.55fr) minmax(0,1.45fr);align-items:start;gap:6vw;border-top:3px double #211e20;border-bottom:1px solid #bcb2a9;padding:44px 0 46px}
+.press .press-masthead{font-size:clamp(24px,2.6vw,36px);border:0;padding:0;margin:0 0 20px}
+.press .press-category,.press .press-byline,.press .press-meta span,.press .press-access{color:#635951}
+.press .press-feature h3{font-size:clamp(32px,3.8vw,56px);line-height:1.15;margin-bottom:24px}
+.press .press-feature-summary{color:#514943;max-width:58ch}
+.press .press-action{color:#96392f}
+.press .press-feature .press-action{border-color:#96392f}
+.press .press-feature h3 a:hover,.press .press-item>a:hover h3{color:#96392f}
+.press .press-archive-title{font-size:16px;margin:36px 0 18px}
+.press .press-list{display:block}
+.press .press-item{border-top:1px solid #c8beb5}
+.press .press-item>a{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.7fr) auto;column-gap:32px;row-gap:8px;align-items:start;padding:27px 0}
+.press .press-meta{grid-column:1;grid-row:1 / span 2;margin:0;color:var(--ink);font-size:23px;gap:8px}
+.press .press-item h3{grid-column:2;grid-row:1;font:500 clamp(21px,2.1vw,29px)/1.25 'Playfair Display',serif;text-wrap:pretty;margin:0}
+.press .press-item .press-byline{grid-column:2;grid-row:2;margin:0;font-size:12px}
+.press .press-item .press-action{grid-column:3;grid-row:1 / span 2;align-self:center;margin:0;font-size:12px;white-space:nowrap}
+.press .press-access{border-color:#c8beb5;margin-top:0;font-size:12px}
+.press a:focus-visible{outline-color:#96392f}
+@media(max-width:760px){
+ .press .press-heading{grid-template-columns:1fr;gap:22px;margin-bottom:28px}
+ .press .press-heading h2{font-size:52px}
+ .press .press-feature{grid-template-columns:1fr;gap:24px;padding:28px 0 32px}
+ .press .press-masthead{font-size:28px;margin-bottom:10px}
+ .press .press-category{margin:0}.press-source-note{display:none}
+ .press .press-feature h3{font-size:34px}
+ .press .press-item>a{grid-template-columns:1fr auto;gap:14px 16px;padding:24px 0}
+ .press .press-meta{grid-column:1 / -1;grid-row:1;font-size:21px}
+ .press .press-item h3{grid-column:1 / -1;grid-row:2;font-size:25px}
+ .press .press-item .press-byline{grid-column:1;grid-row:3;align-self:center}
+ .press .press-item .press-action{grid-column:2;grid-row:3}
+}
