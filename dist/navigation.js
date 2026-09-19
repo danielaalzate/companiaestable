@@ -94,7 +94,7 @@ if(document.body?.dataset.page === 'home'){
   const heroActions = hero?.querySelector('.actions');
   const heroCard = hero?.querySelector('.hero-card');
   if(eyebrow) eyebrow.innerHTML = '<span class="dot"></span> Teatro y ópera · Bogotá';
-  if(heroTitle) heroTitle.innerHTML = 'Un repertorio<br><em>en movimiento.</em>';
+  if(heroTitle) heroTitle.innerHTML = 'Teatro y ópera.<br><em>Una mirada propia.</em>';
   if(heroCopy) heroCopy.textContent = 'Obras clásicas y contemporáneas que viajan entre escenarios, lenguajes y públicos. Teatro y ópera creados desde Bogotá para dialogar con Colombia y Latinoamérica.';
   if(heroActions){
     const primary = heroActions.querySelector('.button:first-child');
