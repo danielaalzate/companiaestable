@@ -22,3 +22,8 @@ body[data-page=repertory] .hero{background:var(--ink);padding:80px var(--gutter)
 @media(max-width:760px){.nav .brand>span.brand-wordmark{height:48px;padding-left:8px}.nav .brand>span.brand-wordmark>span.brand-wordmark-crop{width:118px;height:45px}.brand-wordmark-crop img{width:142px;left:-16px;top:-16px}}
 .nav .brand-lockup{height:48px}
 @media(max-width:760px){.nav .brand-lockup{height:43px}}
+
+/* Keep the hero copy comfortably clear of the information strip. */
+body[data-page=home] .hero-copy{margin-bottom:40px}
+body[data-page=home] .ticker{padding-top:18px;padding-bottom:18px}
+@media(max-width:760px){body[data-page=home] .hero-copy{margin-bottom:28px}body[data-page=home] .ticker{padding-top:16px;padding-bottom:16px}}
