@@ -17,7 +17,7 @@ if(toggle && panel){
     brand.innerHTML = `<span class="brand-lockup" aria-hidden="true"><img src="./assets/logo-compania-estable-transparente.png" alt="" width="1600" height="749"></span><span class="brand-wordmark" aria-hidden="true"><span class="brand-wordmark-crop"><img src="./assets/logo-wordmark-header-2026.png" alt="" width="1774" height="887"></span></span>`;
   });
   panel.innerHTML = `
-    <a class="menu-brand" href="${brandHomeLink}" aria-label="Fundación La Compañía Estable, inicio"><span class="menu-brand-lockup" aria-hidden="true"><img src="./assets/logo-compania-estable-transparente.png" alt="" width="1600" height="749"></span><span class="menu-brand-wordmark" aria-hidden="true"><span class="menu-brand-wordmark-crop"><img src="./assets/logo-wordmark-header-2026.png" alt="" width="1774" height="887"></span></span></a>
+    <a class="menu-brand" href="${brandHomeLink}" aria-label="La Compañía Estable, inicio"><span class="menu-brand-lockup" aria-hidden="true"><img src="./assets/logo-compania-estable-transparente.png" alt="" width="1600" height="749"></span><span class="menu-brand-wordmark" aria-hidden="true"><span class="menu-brand-wordmark-crop"><img src="./assets/logo-wordmark-header-2026.png" alt="" width="1774" height="887"></span></span></a>
     <div class="menu-group">
       <button class="menu-submenu-toggle" type="button" aria-expanded="false" aria-controls="company-submenu">La compañía <span aria-hidden="true">+</span></button>
       <div class="menu-submenu" id="company-submenu" hidden>
