@@ -148,9 +148,6 @@ if(document.body?.dataset.page === 'home'){
 
 const currentProductionTitle = document.querySelector('#en-escena .feature-body h2');
 if(currentProductionTitle) currentProductionTitle.innerHTML = 'Como les<br><em>guste</em>';
-const partnersTrack = document.querySelector('[data-partners-track]');
-const olaPartner = partnersTrack?.querySelector('.logo-ola')?.closest('.partner');
-if(olaPartner) partnersTrack.prepend(olaPartner);
 document.querySelectorAll('[data-carousel-track], [data-partners-track]').forEach(track => {
   const carousel = track.closest('[data-carousel], .partners');
   const slides = [...track.querySelectorAll('.partner')];
