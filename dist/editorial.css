@@ -27,3 +27,9 @@ body[data-page=repertory] .hero{background:var(--ink);padding:80px var(--gutter)
 body[data-page=home] .hero-copy{margin-bottom:40px}
 body[data-page=home] .ticker{padding-top:18px;padding-bottom:18px}
 @media(max-width:760px){body[data-page=home] .hero-copy{margin-bottom:28px}body[data-page=home] .ticker{padding-top:16px;padding-bottom:16px}}
+
+/* Current production: let the stage image dissolve into the reading area. */
+body[data-page=home] .feature{background:#111011}
+body[data-page=home] .feature-image{background-image:linear-gradient(90deg,rgba(17,16,17,0) 34%,rgba(17,16,17,.28) 57%,rgba(17,16,17,.78) 82%,#111011 100%),url('./como-les-guste-limpia.png')}
+body[data-page=home] .feature-body{background:linear-gradient(90deg,#111011 0%,#111011 100%)}
+@media(max-width:760px){body[data-page=home] .feature-image{background-image:linear-gradient(0deg,#111011 0%,rgba(17,16,17,.58) 30%,transparent 64%),url('./como-les-guste-limpia.png')}}
