@@ -75,6 +75,21 @@ if(document.body?.dataset.page === 'home'){
     document.head.append(creditStyles);
   }
   document.querySelectorAll('.section-label').forEach(label => { label.textContent = label.textContent.replace(/^\d+\s+—\s+/, ''); });
+  const archiveYears = {
+    'Como les guste': '2026',
+    'La bohème': '2026',
+    'La vorágine': '2025',
+    'La coronación de Popea': '2025',
+    'Tosca': '2021',
+    'Florencia en el Amazonas': '2017',
+    'Macbeth': '2016'
+  };
+  document.querySelectorAll('#producciones .production').forEach(production => {
+    const title = production.querySelector('h3')?.textContent.trim();
+    const meta = production.querySelector('p');
+    const year = archiveYears[title];
+    if(year && meta && !meta.textContent.includes(year)) meta.textContent = meta.textContent.replace(' · ', ` · ${year} · `);
+  });
   const hero = document.querySelector('#inicio.hero');
   if(hero && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
     const video = document.createElement('video');
