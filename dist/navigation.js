@@ -142,11 +142,7 @@ if(document.body?.dataset.page === 'home'){
   }
   const currentProductionImage = document.querySelector('#en-escena .feature-image');
   if(currentProductionImage){
-    currentProductionImage.style.backgroundImage = "linear-gradient(0deg,rgba(17,16,17,.38),transparent),url('./como-les-guste-carlos-lema.jpg')";
-    const credit = document.createElement('p');
-    credit.className = 'photo-credit-note';
-    credit.textContent = 'Fotografía: Carlos Lema';
-    currentProductionImage.insertAdjacentElement('afterend', credit);
+    currentProductionImage.style.backgroundImage = "linear-gradient(90deg,rgba(17,16,17,0) 30%,rgba(17,16,17,.32) 60%,rgba(17,16,17,.82) 88%,#111011 100%),linear-gradient(0deg,#111011 0%,rgba(17,16,17,.08) 38%,transparent 68%),url('./como-les-guste-limpia.png')";
   }
 }
 
