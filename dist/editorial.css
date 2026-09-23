@@ -40,3 +40,7 @@ nav.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;b
 .nav .brand>span.brand-wordmark{align-items:flex-start;box-sizing:border-box;gap:3px}
 .nav .brand-wordmark small{font-size:11px}.nav .brand-wordmark strong,.nav .brand-wordmark b{font-size:15px}
 @media(max-width:760px){.nav .brand-wordmark small{font-size:9px}.nav .brand-wordmark strong,.nav .brand-wordmark b{font-size:12px}.nav .brand>span.brand-wordmark{gap:2px}}
+.whatsapp-bubble{position:fixed;right:max(24px,env(safe-area-inset-right));bottom:max(24px,env(safe-area-inset-bottom));z-index:40;display:flex;align-items:center;justify-content:center;width:60px;height:60px;box-sizing:border-box;border-radius:50%;background:#25d366;color:#fff!important;box-shadow:0 5px 18px #0003;text-decoration:none;transition:background .2s,transform .2s}
+.whatsapp-bubble svg{display:block;width:32px;height:32px}.whatsapp-bubble:hover{background:#128c4a;transform:translateY(-2px)}.whatsapp-bubble:focus-visible{outline:3px solid #fff;outline-offset:4px;box-shadow:0 0 0 7px #128c4a}
+@media(max-width:760px){.whatsapp-bubble{width:54px;height:54px;right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom))}.whatsapp-bubble svg{width:29px;height:29px}}
+@media(prefers-reduced-motion:reduce){.whatsapp-bubble{transition:none}.whatsapp-bubble:hover{transform:none}}
