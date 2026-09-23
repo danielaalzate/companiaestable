@@ -34,7 +34,12 @@ body[data-page=home] .feature-image{background-image:linear-gradient(90deg,rgba(
 body[data-page=home] .feature-body{background:linear-gradient(90deg,#111011 0%,#111011 100%)}
 @media(max-width:760px){body[data-page=home] .feature-image{background-image:linear-gradient(0deg,#111011 0%,rgba(17,16,17,.58) 30%,transparent 64%),url('./como-les-guste-limpia.png')}}
 /* Shared header layout must not depend on a page's inline styles. */
-nav.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;box-sizing:border-box;width:100%}
+nav.nav{--coral:#ef6a5b;--paper:#f5f1ec;--ink:#111011;--gutter:clamp(24px,7vw,112px);display:flex;align-items:center;justify-content:space-between;gap:20px;box-sizing:border-box;width:100%;border-bottom:1px solid rgba(245,241,236,.18)}
+nav.nav .brand,nav.nav .brand *,nav.nav .menu-toggle{box-sizing:border-box}
+nav.nav .brand{font-family:'DM Mono',monospace;font-weight:500;line-height:1.25;letter-spacing:.1em;text-transform:uppercase}
+nav.nav .brand-lockup{color:var(--coral)}
+nav.nav .menu-toggle{font:400 16px/1.6 'DM Sans',sans-serif;letter-spacing:normal}
+.menu-panel{--coral:#ef6a5b;--paper:#f5f1ec;--ink:#111011;--gutter:clamp(24px,7vw,112px)}
 .nav a.brand,.menu-panel a.menu-brand{text-decoration:none;color:var(--paper)}
 .nav .menu-toggle{flex:0 0 52px;box-sizing:border-box}
 .nav .brand>span.brand-wordmark{align-items:flex-start;box-sizing:border-box;gap:3px}

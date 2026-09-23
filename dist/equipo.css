@@ -1,5 +1,5 @@
 :root{--paper:#f2ede7;--ink:#121113;--muted:#807873;--coral:#ef6c5c;--gutter:clamp(24px,6vw,96px)}
-body[data-page="team"]{background:var(--ink);color:var(--paper)}
+body[data-page="team"]{margin:0;background:var(--ink);color:var(--paper)}
 .team-hero{min-height:58vh;padding:clamp(94px,16vh,190px) var(--gutter) clamp(70px,10vw,135px);display:grid;align-content:end;background:linear-gradient(90deg,#121113 0%,#121113e8 32%,#12111380 61%,#12111320 100%),linear-gradient(0deg,#121113aa 0%,transparent 62%),url('./assets/equipo/hero-reflector-escena.png') center/cover no-repeat;border-bottom:1px solid #443c3d}
 .team-kicker{margin:0 0 26px;color:var(--coral);font:600 11px/1.2 'DM Sans',sans-serif;letter-spacing:.17em;text-transform:uppercase}
 .team-hero h1{max-width:900px;margin:0;font:400 clamp(60px,10.3vw,150px)/.86 'Playfair Display',serif;letter-spacing:-.06em}.team-hero h1 em{color:var(--coral);font-weight:400}.team-hero p{max-width:520px;margin:32px 0 0;color:#d1c9c5;font-size:clamp(16px,1.5vw,20px);line-height:1.55}
