@@ -5,4 +5,15 @@ body[data-page="company"] *{box-sizing:border-box}body[data-page="company"] a{co
 .company-story{max-width:72ch;margin-left:auto;margin-right:auto;font-size:18px;line-height:1.75}.company-story p{margin:0 0 30px}.company-story p:first-child{font-size:21px;line-height:1.7;color:#312a27}.company-story p:last-child{margin-bottom:0}
 .company-next{max-width:81ch;margin:56px auto 0;padding-top:25px;border-top:1px solid #c8c0ba;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.company-next a{display:inline-flex;align-items:center;min-height:44px;text-decoration:underline!important;text-underline-offset:6px}.company-next a:hover,.company-back:hover{color:#a13b31!important}
 body[data-page="company"] ::selection{background:#ef6a5b;color:#111011}
+.company-story{max-width:none}
+.company-story>p{max-width:68ch;margin-inline:auto;margin-bottom:32px}
+.company-opening{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:clamp(32px,4vw,64px);margin-bottom:64px}
+.company-opening>p{margin:0;font-size:21px;line-height:1.7;color:#312a27}
+.company-photo{max-width:960px;margin:56px auto 64px}
+.company-photo img{display:block;width:100%;height:auto;background:#111011}
+.company-photo figcaption{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 24px;padding-top:14px;color:#665d58;font-size:13px;line-height:1.5}
+.company-photo figcaption em{color:#312a27;font-family:'Playfair Display',serif;font-size:20px}
+.company-photo-opening{width:100%;margin:0}
+@media(max-width:1000px){.company-opening{grid-template-columns:minmax(0,1fr);gap:32px}.company-opening>p{max-width:68ch;margin-inline:auto}.company-photo-opening{max-width:760px;margin-inline:auto}}
+@media(max-width:760px){.company-opening{margin-bottom:40px}.company-opening>p{font-size:19px}.company-photo{margin:36px auto 40px}.company-photo-opening{margin:0}.company-photo figcaption{display:grid;gap:4px}.company-story>p{margin-bottom:26px}}
 @media(max-width:760px){.company-main{padding:30px 24px 64px}.company-heading{padding:26px 0 32px;margin-bottom:34px}.company-heading h1{font-size:clamp(36px,10vw,60px)}.company-story{font-size:17px;line-height:1.75}.company-story p:first-child{font-size:19px}.company-story p{margin-bottom:26px}.company-next{margin-top:38px;display:grid;gap:8px}}
