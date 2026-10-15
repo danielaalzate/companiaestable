@@ -1,2 +1,5 @@
 @media(min-width:761px){body[data-page="home"] .feature{grid-template-rows:minmax(0,1fr) auto}body[data-page="home"] .feature-image{grid-column:1;grid-row:1}body[data-page="home"] .feature-body{grid-column:2;grid-row:1 / span 2}body[data-page="home"] .feature>.photo-credit-note{grid-column:1;grid-row:2;margin:0;padding:11px 18px 14px;background:#111011;color:#b9ada6}}
 @media(max-width:760px){body[data-page="home"] .feature>.photo-credit-note{margin:0;padding:10px 24px 13px;background:#111011;color:#b9ada6}}
+/* Keep the hat and the space above it visible instead of centering a portrait crop. */
+body[data-page="home"] .feature-image{background-position:center top;background-size:cover}
+@media(max-width:760px){body[data-page="home"] .feature-image{min-height:0;height:auto;aspect-ratio:4/5;background-position:center top}}
