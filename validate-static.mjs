@@ -5,7 +5,7 @@ const missing = [];
 for (const page of pages) {
   const html = fs.readFileSync(path.join('dist', page), 'utf8');
   for (const [, reference] of html.matchAll(/(?:src|href)="(\.\/[^\"]+)"/g)) {
-    const file = reference.split('#')[0];
+    const file = reference.split(/[?#]/)[0];
     if (!fs.existsSync(path.join('dist', file))) missing.push({page, file});
   }
 }
